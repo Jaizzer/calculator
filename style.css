@@ -30,3 +30,13 @@
 button {
     flex: 1;
 }
+
+.second-display {
+    border: 1px solid black;
+    flex: 0.5;
+}
+
+.main-display {
+    border: 1px solid black;
+    flex: 1;
+}
