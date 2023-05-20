@@ -6,3 +6,10 @@
     background-color: gray;
 }
 
+.calculator-display {
+    width: 360px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(86, 96, 86);
+}
