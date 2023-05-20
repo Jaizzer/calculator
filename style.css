@@ -16,6 +16,8 @@
     border: 1px solid black;
     border-radius: 10px;
     background-color: rgb(86, 96, 86);
+    display: flex;
+    flex-direction: column;
 }
 
 .button-container {
