@@ -13,3 +13,8 @@
     border-radius: 10px;
     background-color: rgb(86, 96, 86);
 }
+
+.button-container {
+    width: 360px;
+    height: 90px;
+}
