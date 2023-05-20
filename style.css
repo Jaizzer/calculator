@@ -17,4 +17,6 @@
 .button-container {
     width: 360px;
     height: 90px;
+    display: flex;
+    flex-direction: row;
 }
