@@ -33,7 +33,9 @@ body {
 }
 
 button {
+    height: 70px;
     flex: 1;
+    border-radius: 10px;
 }
 
 .second-display {
