@@ -1,0 +1,7 @@
+.calculator-body {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: gray;
+}
