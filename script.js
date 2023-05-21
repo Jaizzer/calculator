@@ -95,4 +95,5 @@ clearButton.addEventListener('click', function() {
     secondDisplay.textContent = '';
     nextNumber = 0;
     nextOperator = '';
+    decimalClickCount = 0;
 })
