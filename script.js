@@ -18,5 +18,5 @@ deleteButton.addEventListener('click', function() {
 
 const operatorButtons = document.querySelectorAll("button.operation");
 let currentOperator = '+';
-let computed = 0;
+let computedNumber = 0;
 let nextOperator = '';
