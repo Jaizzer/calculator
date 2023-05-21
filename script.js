@@ -73,7 +73,7 @@ function divide(a, b) {
 const equalButton = document.querySelector('button#equal-sign');
 
 equalButton.addEventListener('click', function() {
-    if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '') {
+    if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '' && secondDisplay.textContent.charAt(secondDisplay.textContent.length - 1) !== '=') {
        decimalClickCount = 0;
        nextNumber = parseFloat(mainDisplay.textContent);
        mainDisplay.textContent = '';
