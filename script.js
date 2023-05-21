@@ -91,3 +91,5 @@ clearButton.addEventListener('click', function() {
     nextNumber = 0;
     nextOperator = '';
 })
+
+const decimalButton = document.querySelector('button#decimal-sign');
