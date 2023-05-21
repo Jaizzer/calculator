@@ -41,12 +41,15 @@ equalButton.addEventListener('click', function() {
             decimalClickCount = 0;
             nextNumber = parseFloat(mainDisplay.textContent);
             mainDisplay.textContent = '';
-            computedNumber = operate(computedNumber, nextNumber, currentOperator);
-            secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
-            mainDisplay.textContent = computedNumber;
-            
-            currentOperator = '+';  
-            computedNumber = 0;
+
+            if (operate(computedNumber, nextNumber, currentOperator) !== "undefined") {
+                computedNumber = operate(computedNumber, nextNumber, currentOperator);
+                secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
+                mainDisplay.textContent = computedNumber;
+    
+                currentOperator = '+';  
+                computedNumber = 0;
+            }
     }
 })
 
