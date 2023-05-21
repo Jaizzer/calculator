@@ -60,7 +60,7 @@ equalButton.addEventListener('click', function() {
             if (operate(computedNumber, nextNumber, currentOperator) !== "undefined") {
                 computedNumber = operate(computedNumber, nextNumber, currentOperator);
                 secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
-                mainDisplay.textContent = computedNumber;
+                mainDisplay.textContent = computedNumber.toFixed(3);
     
                 currentOperator = '+';  
                 computedNumber = 0;
