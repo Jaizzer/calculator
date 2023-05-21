@@ -38,7 +38,7 @@ body {
 }
 
 button {
-    height: 70px;
+    height: 100%;
     width: 70px;
     border-radius: 10px;
 }
