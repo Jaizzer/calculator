@@ -29,7 +29,7 @@ operatorButtons.forEach(function(operatorButton) {
     operatorButton.addEventListener('click', function(event) {
         decimalClickCount = 0;
         nextOperator = event.target.textContent;
-        if (mainDisplay.textContent !== '' || secondDisplay.textContent !== '') {
+        if (mainDisplay.textContent !== '' || secondDisplay.textContent !== '' || nextOperator === '-') {
             if (mainDisplay.textContent !== '') {
                 nextNumber = parseFloat(mainDisplay.textContent);
                 mainDisplay.textContent = '';
