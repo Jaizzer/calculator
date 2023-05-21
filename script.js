@@ -75,7 +75,10 @@ operatorButtons.forEach(function(operatorButton) {
             if (mainDisplay.textContent !== '') {
                 nextNumber = parseFloat(mainDisplay.textContent);
                 mainDisplay.textContent = '';
-                computedNumber = operate(computedNumber, nextNumber, currentOperator);
+
+                if (operate(computedNumber, nextNumber, currentOperator) !== "undefined") {
+                    computedNumber = operate(computedNumber, nextNumber, currentOperator);
+                }
             }
             secondDisplay.textContent =  `${computedNumber} ${nextOperator}`;
             currentOperator = nextOperator;
