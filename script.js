@@ -1,5 +1,6 @@
 let mainDisplay = document.querySelector('.main-display');
 let secondDisplay = document.querySelector('.second-display');
+let decimalClickCount = 0;
 
 const numberButtons = Array.from(document.querySelectorAll('button.number'));
 
