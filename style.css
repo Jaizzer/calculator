@@ -3,54 +3,66 @@ body {
     justify-content: center;
 }
 
-* {
-    border: 1px solid black;
-}
-
 .calculator-body {
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 500px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: gray;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    padding: 30px;
 }
 
 .calculator-display {
-    width: 360px;
-    height: 140px;
+    width: 100%;
+    height: 150px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: rgb(86, 96, 86);
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 .button-container {
-    width: 360px;
+    width: 100%;
     height: 70px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 button {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
     height: 100%;
-    width: 80px;
+    width: 100%;
     border-radius: 10px;
+    border: 0px;
 }
 
 .second-display {
-    border: 1px solid black;
-    flex: 0.5;
+    flex: 1;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
 }
 
 .main-display {
-    border: 1px solid black;
-    flex: 1;
+    flex: 2;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: flex-start;
 }
