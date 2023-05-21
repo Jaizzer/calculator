@@ -8,3 +8,5 @@ numberButtons.forEach(function(numberButton) {
         mainDisplay.textContent = mainDisplay.textContent + pressedNumber;
     });
 })
+
+let deleteButton = document.querySelector('#delete');
