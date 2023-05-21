@@ -82,3 +82,12 @@ equalButton.addEventListener('click', function() {
 })
 
 const clearButton = document.querySelector('button#clear');
+
+clearButton.addEventListener('click', function() {
+    currentOperator = '+';  
+    computedNumber = 0;
+    mainDisplay.textContent = '';
+    secondDisplay.textContent = '';
+    nextNumber = 0;
+    nextOperator = '';
+})
