@@ -44,7 +44,7 @@ equalButton.addEventListener('click', function() {
             computedNumber = operate(computedNumber, nextNumber, currentOperator);
             secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
             mainDisplay.textContent = computedNumber;
-
+            
             currentOperator = '+';  
             computedNumber = 0;
     }
@@ -90,6 +90,10 @@ function operate(a, b, operator) {
         case "×":
             return multiply(a, b);
         case "÷":
+            if (b === 0) {
+                alert("You can't divide by zero!")
+                return 'undefined';
+            }
             return divide(a, b);
     }
 }
