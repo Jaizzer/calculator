@@ -13,7 +13,14 @@ const decimalButton = document.querySelector('button#decimal-sign');
 let decimalClickCount = 0;
 decimalButton.addEventListener('click', function() {
     if (decimalClickCount === 0) {
-        mainDisplay.textContent = mainDisplay.textContent + '.';
+        // Add leading zero if the decimal point do not precede a number.
+        if (mainDisplay.textContent === '') {
+            mainDisplay.textContent = '0.'
+        }
+        // Do not add leading zero if the decimal point precedes a number.
+        else {
+            mainDisplay.textContent = mainDisplay.textContent + '.';
+        }
         decimalClickCount++;
     }
 })
