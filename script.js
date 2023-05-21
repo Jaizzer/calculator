@@ -97,3 +97,10 @@ clearButton.addEventListener('click', function() {
     nextOperator = '';
     decimalClickCount = 0;
 })
+
+decimalButton.addEventListener('click', function() {
+    if (decimalClickCount === 0) {
+        mainDisplay.textContent = mainDisplay.textContent + '.';
+        decimalClickCount++;
+    }
+})
