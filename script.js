@@ -80,7 +80,7 @@ operatorButtons.forEach(function(operatorButton) {
                     computedNumber = operate(computedNumber, nextNumber, currentOperator);
                 }
             }
-            secondDisplay.textContent =  `${computedNumber} ${nextOperator}`;
+            secondDisplay.textContent = `${computedNumber} ${nextOperator}`;
             currentOperator = nextOperator;
         }
     })
@@ -110,19 +110,16 @@ function add(a, b) {
 }
 
 // This function subtracts two numbers.
-
 function subtract(a, b) {
     return a - b;
 }
 
 // This function multiplies two numbers.
-
 function multiply(a, b) {
     return a * b;
 }
 
 // This function divides two numbers.
-
 function divide(a, b) {
     return a / b;
 }
