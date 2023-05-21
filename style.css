@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .calculator-body {
@@ -8,7 +9,7 @@ body {
     height: 500px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: gray;
+    background-color: #9a6cb4;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -19,7 +20,7 @@ body {
     height: 150px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: rgb(86, 96, 86);
+    background-color: #d1b2e2;
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
@@ -38,17 +39,20 @@ body {
 
 button {
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    border: 0px;
+    border: 1px solid black;
+    background-color: #ecd4d7;
+}
+
+button:hover {
+    background-color: hsla(353, 39%, 88%, 0.768);
 }
 
 .second-display {
     flex: 1;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -59,7 +63,6 @@ button {
 .main-display {
     flex: 2;
     font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
