@@ -14,3 +14,5 @@ let deleteButton = document.querySelector('#delete');
 deleteButton.addEventListener('click', function() {
     mainDisplay.textContent = mainDisplay.textContent.slice(0, -1);
 })
+
+const operatorButtons = document.querySelectorAll("button.operation");
