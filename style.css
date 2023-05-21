@@ -34,6 +34,7 @@ body {
     height: 90px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 button {
