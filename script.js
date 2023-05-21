@@ -1,11 +1,14 @@
+// Access and save the calculator display divs.
 let mainDisplay = document.querySelector('.main-display');
 let secondDisplay = document.querySelector('.second-display');
 
+// Initialize calculator values.
 let currentOperator = '+';
 let computedNumber = 0;
 let nextOperator = '';
 let nextNumber;
 
+// Add functinoality to the decimal button so that the decimal point can be appended one time.
 const decimalButton = document.querySelector('button#decimal-sign');
 let decimalClickCount = 0;
 decimalButton.addEventListener('click', function() {
@@ -15,6 +18,7 @@ decimalButton.addEventListener('click', function() {
     }
 })
 
+// Add functionality to number buttons so numbers are appended when pressed.
 const numberButtons = Array.from(document.querySelectorAll('button.number'));
 numberButtons.forEach(function(numberButton) {
     numberButton.addEventListener('click', function(event) {
@@ -23,11 +27,13 @@ numberButtons.forEach(function(numberButton) {
     });
 })
 
+// Add functionality to the delete button to delete a number from the current value input when pressed.
 let deleteButton = document.querySelector('#delete');
 deleteButton.addEventListener('click', function() {
     mainDisplay.textContent = mainDisplay.textContent.slice(0, -1);
 })
 
+// Add functionality to the equal button to process and display the operation and operation results.
 const equalButton = document.querySelector('button#equal-sign');
 equalButton.addEventListener('click', function() {
     if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '' && 
@@ -44,6 +50,7 @@ equalButton.addEventListener('click', function() {
     }
 })
 
+// Add functionality to the claer button to reset the entire calculator when pressed.
 const clearButton = document.querySelector('button#clear');
 clearButton.addEventListener('click', function() {
     currentOperator = '+';  
@@ -55,6 +62,7 @@ clearButton.addEventListener('click', function() {
     decimalClickCount = 0;
 })
 
+// Add functinality to the operator buttons to call the right operations when pressed.
 const operatorButtons = document.querySelectorAll("button.operation");
 operatorButtons.forEach(function(operatorButton) {
     operatorButton.addEventListener('click', function(event) {
@@ -72,6 +80,7 @@ operatorButtons.forEach(function(operatorButton) {
     })
 })
 
+// This function decides which operation to use.
 function operate(a, b, operator) {
     switch (operator) {
         case "+":
@@ -85,17 +94,24 @@ function operate(a, b, operator) {
     }
 }
 
+// This function adds two numbers.
 function add(a, b) {
     return a + b;
 }
+
+// This function subtracts two numbers.
 
 function subtract(a, b) {
     return a - b;
 }
 
+// This function multiplies two numbers.
+
 function multiply(a, b) {
     return a * b;
 }
+
+// This function divides two numbers.
 
 function divide(a, b) {
     return a / b;
