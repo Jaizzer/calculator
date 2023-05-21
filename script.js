@@ -75,5 +75,8 @@ equalButton.addEventListener('click', function() {
        computedNumber = operate(computedNumber, nextNumber, currentOperator);
        secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
        mainDisplay.textContent = computedNumber;
+       
+       currentOperator = '+';  
+       computedNumber = 0;
     }
 })
