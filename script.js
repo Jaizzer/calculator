@@ -22,6 +22,21 @@ let computedNumber = 0;
 let nextOperator = '';
 let nextNumber;
 
+operatorButtons.forEach(function(operatorButton) {
+    operatorButton.addEventListener('click', function(event) {
+        nextOperator = event.target.textContent;
+        if (mainDisplay.textContent !== '' || secondDisplay.textContent !== '') {
+            if (mainDisplay.textContent !== '') {
+                nextNumber = parseFloat(mainDisplay.textContent);
+                mainDisplay.textContent = '';
+                computedNumber = operate(computedNumber, nextNumber, currentOperator);
+            }
+            secondDisplay.textContent =  `${computedNumber} ${nextOperator}`;
+            currentOperator = nextOperator;
+        }
+    })
+})
+
 function operate(a, b, operator) {
     switch (operator) {
         case "+":
