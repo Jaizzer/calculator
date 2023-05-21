@@ -39,6 +39,7 @@ body {
 
 button {
     font-size: 25px;
+    color: black;
     height: 100%;
     width: 100%;
     border-radius: 10px;
@@ -52,6 +53,7 @@ button:hover {
 
 .second-display {
     flex: 1;
+    color: black;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -62,6 +64,7 @@ button:hover {
 
 .main-display {
     flex: 2;
+    color: black;
     font-size: 40px;
     display: flex;
     align-items: center;
