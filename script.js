@@ -20,3 +20,4 @@ const operatorButtons = document.querySelectorAll("button.operation");
 let currentOperator = '+';
 let computedNumber = 0;
 let nextOperator = '';
+let nextNumber;
