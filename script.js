@@ -1,11 +1,21 @@
 let mainDisplay = document.querySelector('.main-display');
 let secondDisplay = document.querySelector('.second-display');
 
+let currentOperator = '+';
+let computedNumber = 0;
+let nextOperator = '';
+let nextNumber;
+
 const decimalButton = document.querySelector('button#decimal-sign');
 let decimalClickCount = 0;
+decimalButton.addEventListener('click', function() {
+    if (decimalClickCount === 0) {
+        mainDisplay.textContent = mainDisplay.textContent + '.';
+        decimalClickCount++;
+    }
+})
 
 const numberButtons = Array.from(document.querySelectorAll('button.number'));
-
 numberButtons.forEach(function(numberButton) {
     numberButton.addEventListener('click', function(event) {
         let pressedNumber = event.target.textContent;
@@ -14,17 +24,38 @@ numberButtons.forEach(function(numberButton) {
 })
 
 let deleteButton = document.querySelector('#delete');
-
 deleteButton.addEventListener('click', function() {
     mainDisplay.textContent = mainDisplay.textContent.slice(0, -1);
 })
 
-const operatorButtons = document.querySelectorAll("button.operation");
-let currentOperator = '+';
-let computedNumber = 0;
-let nextOperator = '';
-let nextNumber;
+const equalButton = document.querySelector('button#equal-sign');
+equalButton.addEventListener('click', function() {
+    if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '' && 
+        secondDisplay.textContent.charAt(secondDisplay.textContent.length - 1) !== '=') {
+            decimalClickCount = 0;
+            nextNumber = parseFloat(mainDisplay.textContent);
+            mainDisplay.textContent = '';
+            computedNumber = operate(computedNumber, nextNumber, currentOperator);
+            secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
+            mainDisplay.textContent = computedNumber;
 
+            currentOperator = '+';  
+            computedNumber = 0;
+    }
+})
+
+const clearButton = document.querySelector('button#clear');
+clearButton.addEventListener('click', function() {
+    currentOperator = '+';  
+    computedNumber = 0;
+    mainDisplay.textContent = '';
+    secondDisplay.textContent = '';
+    nextNumber = 0;
+    nextOperator = '';
+    decimalClickCount = 0;
+})
+
+const operatorButtons = document.querySelectorAll("button.operation");
 operatorButtons.forEach(function(operatorButton) {
     operatorButton.addEventListener('click', function(event) {
         decimalClickCount = 0;
@@ -69,38 +100,3 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
-
-const equalButton = document.querySelector('button#equal-sign');
-
-equalButton.addEventListener('click', function() {
-    if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '' && secondDisplay.textContent.charAt(secondDisplay.textContent.length - 1) !== '=') {
-       decimalClickCount = 0;
-       nextNumber = parseFloat(mainDisplay.textContent);
-       mainDisplay.textContent = '';
-       computedNumber = operate(computedNumber, nextNumber, currentOperator);
-       secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
-       mainDisplay.textContent = computedNumber;
-
-       currentOperator = '+';  
-       computedNumber = 0;
-    }
-})
-
-const clearButton = document.querySelector('button#clear');
-
-clearButton.addEventListener('click', function() {
-    currentOperator = '+';  
-    computedNumber = 0;
-    mainDisplay.textContent = '';
-    secondDisplay.textContent = '';
-    nextNumber = 0;
-    nextOperator = '';
-    decimalClickCount = 0;
-})
-
-decimalButton.addEventListener('click', function() {
-    if (decimalClickCount === 0) {
-        mainDisplay.textContent = mainDisplay.textContent + '.';
-        decimalClickCount++;
-    }
-})
