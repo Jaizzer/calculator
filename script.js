@@ -17,23 +17,23 @@ deleteButton.addEventListener('click', function() {
 })
 
 const operatorButtons = document.querySelectorAll("button.operation");
-let currentOperator = 'add';
+let currentOperator = '+';
 let computedNumber = 0;
 let nextOperator = '';
 let nextNumber;
 
 function operate(a, b, operator) {
     switch (operator) {
-        case "add":
+        case "+":
             add(a, b);
             break;
-        case "subtract":
+        case "-":
             subtract(a, b);
             break;
-        case "multiply":
+        case "×":
             multiply(a, b);
             break;
-        case "divide":
+        case "÷":
             divide(a, b);
             break;
     }
