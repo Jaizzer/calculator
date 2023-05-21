@@ -1,5 +1,7 @@
 let mainDisplay = document.querySelector('.main-display');
 let secondDisplay = document.querySelector('.second-display');
+
+const decimalButton = document.querySelector('button#decimal-sign');
 let decimalClickCount = 0;
 
 const numberButtons = Array.from(document.querySelectorAll('button.number'));
@@ -94,6 +96,3 @@ clearButton.addEventListener('click', function() {
     nextNumber = 0;
     nextOperator = '';
 })
-
-const decimalButton = document.querySelector('button#decimal-sign');
-
