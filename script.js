@@ -25,6 +25,7 @@ let nextNumber;
 
 operatorButtons.forEach(function(operatorButton) {
     operatorButton.addEventListener('click', function(event) {
+        decimalClickCount = 0;
         nextOperator = event.target.textContent;
         if (mainDisplay.textContent !== '' || secondDisplay.textContent !== '') {
             if (mainDisplay.textContent !== '') {
@@ -71,6 +72,7 @@ const equalButton = document.querySelector('button#equal-sign');
 
 equalButton.addEventListener('click', function() {
     if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '') {
+       decimalClickCount = 0;
        nextNumber = parseFloat(mainDisplay.textContent);
        mainDisplay.textContent = '';
        computedNumber = operate(computedNumber, nextNumber, currentOperator);
@@ -94,3 +96,4 @@ clearButton.addEventListener('click', function() {
 })
 
 const decimalButton = document.querySelector('button#decimal-sign');
+
