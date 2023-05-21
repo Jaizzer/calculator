@@ -25,16 +25,16 @@ let nextNumber;
 function operate(a, b, operator) {
     switch (operator) {
         case "+":
-            add(a, b);
+            return add(a, b);
             break;
         case "-":
-            subtract(a, b);
+            return subtract(a, b);
             break;
         case "×":
-            multiply(a, b);
+            return multiply(a, b);
             break;
         case "÷":
-            divide(a, b);
+            return divide(a, b);
             break;
     }
 }
