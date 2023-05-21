@@ -67,3 +67,13 @@ function divide(a, b) {
 }
 
 const equalButton = document.querySelector('button#equal-sign');
+
+equalButton.addEventListener('click', function() {
+    if (mainDisplay.textContent !== '' && secondDisplay.textContent !== '') {
+       nextNumber = parseFloat(mainDisplay.textContent);
+       mainDisplay.textContent = '';
+       computedNumber = operate(computedNumber, nextNumber, currentOperator);
+       secondDisplay.textContent =  `${secondDisplay.textContent} ${nextNumber} =`;
+       mainDisplay.textContent = computedNumber;
+    }
+})
