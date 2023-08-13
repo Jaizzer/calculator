@@ -26,7 +26,7 @@ A simple calculator web app that allows you to perform basic arithmetic operatio
 - JavaScript: Logic for performing calculations and managing input.
 
 
-## Contribution
+## Contributing
 
 Contributions are welcome! Feel free to submit pull requests with improvements, bug fixes, or new features.
 
