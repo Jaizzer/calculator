@@ -25,13 +25,8 @@ A simple calculator web app that allows you to perform basic arithmetic operatio
 - CSS: Styling for a visually appealing design.
 - JavaScript: Logic for performing calculations and managing input.
 
-## Screenshots
 
-Include screenshots of your calculator app in action. Here's an example:
-
-![Calculator Screenshot](screenshot.png)
-
-## Development
+## Contribution
 
 Contributions are welcome! Feel free to submit pull requests with improvements, bug fixes, or new features.
 
